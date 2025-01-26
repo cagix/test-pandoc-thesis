@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: cagix/pandoc-thesis@add_gh_action
+      - uses: cagix/pandoc-thesis@master
       - uses: actions/upload-artifact@v4
         with:
           name: thesis_defaults
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: cagix/pandoc-thesis@add_gh_action
+      - uses: cagix/pandoc-thesis@master
         with:
           srcfile: thesis.md
           targetfile: thesis-eisvogel.pdf
@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: cagix/pandoc-thesis@add_gh_action
+      - uses: cagix/pandoc-thesis@master
         with:
           srcfile: thesis.md
           targetfile: thesis-simple.pdf
