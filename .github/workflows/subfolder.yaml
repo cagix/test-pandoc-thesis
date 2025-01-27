@@ -1,0 +1,42 @@
+name: Build using the Eisvogel template
+
+on:
+  # push on master branch
+  push:
+    branches: [master]
+  # triggered manually
+  workflow_dispatch:
+  # triggered by pull requests
+  pull_request:
+
+jobs:
+  eisvogel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cagix/pandoc-thesis@master
+        with:
+          srcfile: fluppie/thesis.md
+          targetfile: thesis-eisvogel.pdf
+          bibfile: fluppie/references.bib
+          template: eisvogel
+      - uses: actions/upload-artifact@v4
+        with:
+          name: thesis_eisvogel
+          path: thesis-eisvogel.pdf
+          overwrite: true
+  simple:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cagix/pandoc-thesis@master
+        with:
+          srcfile: fluppie/thesis.md
+          targetfile: thesis-simple.pdf
+          bibfile: fluppie/references.bib
+          template: simple
+      - uses: actions/upload-artifact@v4
+        with:
+          name: thesis_simple
+          path: thesis-simple.pdf
+          overwrite: true
