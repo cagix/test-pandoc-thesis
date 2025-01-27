@@ -119,7 +119,7 @@ können Sie sich die Wirkung der jeweiligen Zitierstile/CSL-Definitionen anschau
 
 ## Abbildungen
 
-![Hier steht die Bildunterschrift, Quelle: [@Dietz2018] \label{fig:foo}](figs/wuppie.png){width=80%}
+![Hier steht die Bildunterschrift, Quelle: [@Dietz2018] \label{fig:foo}](figs/a.png){width=80%}
 
 
 ## Source-Code
