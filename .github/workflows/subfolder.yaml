@@ -1,4 +1,4 @@
-name: Build using the Eisvogel template
+name: Test document and figures in subfolder
 
 on:
   # push on master branch
